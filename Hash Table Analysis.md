@@ -1,5 +1,7 @@
-Time Complexity:
+Implementation:
+The implementation of a hash table uses chaining to handle collisions, where each index in the table contains a linked list of key-value pairs. The Node class is used to represent each key-value pair, with a pointer to the next node in case of a collision. The HashTable class includes methods for inserting, searching, and deleting key-value pairs. The hash function computes an index by applying the modulus of the hash value with the table size. Insertion involves placing a new node at the appropriate index or appending it to a linked list if a collision occurs. Searching traverses the linked list at the calculated index to find the key. Deletion removes a node by updating the previous node's next pointer, or adjusts the index if the first node is deleted. The hash table can be printed to show the key-value pairs at each index. The implementation handles basic operations efficiently, but performance may degrade if too many collisions occur.
 
+Time Complexity:
 Insert:
 Best Case Scenario: Insertion takes O(1) constant time if there is no collision.
 Worst Case Scenario: In case of collision it will need to travel along the list giving O(n) linear time for insertion.

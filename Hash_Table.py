@@ -5,7 +5,7 @@ class Node:
         self.next = None
 
 class HashTable:
-    #Constructor for HAshtable class
+    #Constructor for Hashtable class
     def __init__(self, size):
         #Initialized size of the hash table
         self.size = size  
@@ -82,22 +82,37 @@ class HashTable:
                 print("End")  #End of the linked list at this index
             else:
                 print(f"Index {index}: End")  # Empty slot
-#user input for size of hash table               
-size = int(input("Enter the size of the hash table: "))
-#Object for hash table with the entered size
-hash_table = HashTable(size)
+
+#Object for hash table  
+hash_table = HashTable(10)
+print("Created Hash Table of size 10")
 
 # Inserting key-value pairs
 hash_table.insert(20, 10)
 hash_table.insert(30, 20)
+hash_table.insert(32, 25)
+hash_table.insert(43, 1)
+hash_table.insert(53, 11)
+
+
+print("Hash Table:")
+hash_table.print_table()
+print()
 
 # Searching for a key
+print("Searching for key 20:")
 print(hash_table.search(20))
+print()
+
+print("Searching for key 30:")
 print(hash_table.search(30))  
-hash_table.print_table()
+print()
 
-
+print("Deleting the key 20")
 # Deleting a key
 hash_table.delete(20)
+print()
+
+print("Searching for key 20:")
 print(hash_table.search(20 ))
 
